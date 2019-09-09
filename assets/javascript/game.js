@@ -19,28 +19,36 @@ $(document).ready(function() {
         alert("You clicked a crystal!");
     });
 
+
+    // function addScore() {
     $("#green").on("click", function() {
         var greenGuess = Math.floor((Math.random() * 12) + 1);
-        //alert("you clicked a green crystal");
         console.log(greenGuess);
-
     });
 
     $("#orange").on("click", function() {
         var orangeGuess = Math.floor((Math.random() * 12) + 1);
-        //alert("you clicked a green crystal");
         console.log(orangeGuess);
-
     });
 
     $("#purple").on("click", function() {
         var purpleGuess = Math.floor((Math.random() * 12) + 1);
-        //alert("you clicked a green crystal");
         console.log(purpleGuess);
-
     });
+    //     var sumScore = greenGuess + orangeGuess + purpleGuess;
+    //    console.log("sum is " + sumScore);
+    // }
+
+    //function addScore(g, o, p) {
 
 
+    // if (score === magicNumber) {
+    //     $("#displayWin").text("you win !");
+    // } else(score > magicNumber); {
+    //     $("#displayWin").text("Sorry, Try Again");
+    // }
+
+    // addScore(greenGuess, orangeGuess, purpleGuess);
 
 
 })
