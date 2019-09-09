@@ -9,44 +9,38 @@ $(document).ready(function() {
 
 
 
-        alert("hi");
+    alert("hi");
 
-        // var magicNumber = 50;
-        var magicNumber = Math.floor((Math.random() * 12) + 1);
-        $("#magic").text("The magic number is " + magicNumber);
-
-        $("#blue").on("click", function() {
-            alert("You clicked a crystal!");
-        });
-
-        /*function Random() {
-            var magicNumber = Math.floor((Math.random() * 12) + 1);
-            console.log(magicNumber);
-            //$("#divone").text(magicNumber);
-            $("#magic").text("The magic number is " + magicNumber);
-
-        } */
-
-
-
-
-    })
-    // Random();
-
-
-
-
-
-
-
-/*function random12() {
+    // magic number will be between 1 and 120
+    var magicNumber = Math.floor((Math.random() * 120) + 19);
+    $("#magic").text("The magic number is " + magicNumber);
 
     $("#blue").on("click", function() {
-        var randomNumberBetween1and12 = Math.floor(Math.random() * 12);
-        return randomNumberBetween1and12;
-        console.log(randomNumberBetween1and12);
-        alert("Your new score is: " + randomNumberBetween1and12);
-        $("#magic").text("The magic number is " + random12);
+        alert("You clicked a crystal!");
+    });
+
+    $("#green").on("click", function() {
+        var greenGuess = Math.floor((Math.random() * 12) + 1);
+        //alert("you clicked a green crystal");
+        console.log(greenGuess);
+
+    });
+
+    $("#orange").on("click", function() {
+        var orangeGuess = Math.floor((Math.random() * 12) + 1);
+        //alert("you clicked a green crystal");
+        console.log(orangeGuess);
+
+    });
+
+    $("#purple").on("click", function() {
+        var purpleGuess = Math.floor((Math.random() * 12) + 1);
+        //alert("you clicked a green crystal");
+        console.log(purpleGuess);
+
+    });
 
 
-    });*/
+
+
+})
