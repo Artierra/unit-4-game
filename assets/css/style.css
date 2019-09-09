@@ -1,0 +1,39 @@
+body {
+    background-image: url('magic1.jpg');
+    background-repeat: no-repeat, repeat;
+    background-color: #39084a;
+}
+
+#instructions {
+    height: 25%;
+    width: 30%;
+    border: solid 2px;
+    background-color: rgb(45, 45, 139);
+    color: white;
+    font-family: 'Tangerine', cursive;
+    font-size: 48px;
+}
+
+#score {}
+
+#magicNumber {
+    height: 25%;
+    width: 30%;
+    border: solid 2px;
+    background-color: rgb(94, 35, 109);
+    color: white;
+    font-family: 'Tangerine', cursive;
+    font-size: 48px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+section {
+    width: 100%;
+}
+
+p {
+    color: white;
+}
