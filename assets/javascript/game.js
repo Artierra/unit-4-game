@@ -1,5 +1,10 @@
 //generate randon munber between 1 and 12
-
+var magicNumber;
+var greenGuess;
+var purpleGuess;
+var orangeGuess;
+var blueGuess;
+var totalScore = 0;
 
 //assign this number to magic numer
 //generate randon number between 1 to 12
@@ -7,48 +12,62 @@
 
 $(document).ready(function() {
 
+    generateNumbers();
 
+    function compareScore() {
+        if (totalScore === magicNumber) {
+            console.log("You win");
+            ("#displayWin").text("you win !");
 
-    alert("hi");
+        } else if (totalScore > magicNumber) {
+            console.log("you lose");
+            $("#displayWin").text("Sorry, Try Again");
 
-    // magic number will be between 1 and 120
-    var magicNumber = Math.floor((Math.random() * 120) + 19);
-    $("#magic").text("The magic number is " + magicNumber);
+        } else {
+            console.log(totalScore);
+        }
+
+    }
+    //$("#blue").on("click", function() {
+    // console.log(blueGuess);
+
 
     $("#blue").on("click", function() {
-        alert("You clicked a crystal!");
+        console.log(blueGuess);
+        totalScore = (totalScore + blueGuess);
+        console.log("total score is " + totalScore);
+        compareScore();
     });
 
-
-    // function addScore() {
     $("#green").on("click", function() {
-        var greenGuess = Math.floor((Math.random() * 12) + 1);
         console.log(greenGuess);
+        totalScore = (totalScore + greenGuess);
+        console.log("total score is " + totalScore);
+        compareScore();
     });
 
     $("#orange").on("click", function() {
-        var orangeGuess = Math.floor((Math.random() * 12) + 1);
         console.log(orangeGuess);
+        totalScore = (totalScore + orangeGuess);
+        console.log("total score is " + totalScore);
+        compareScore();
     });
 
     $("#purple").on("click", function() {
-        var purpleGuess = Math.floor((Math.random() * 12) + 1);
         console.log(purpleGuess);
+        totalScore = (totalScore + purpleGuess);
+        console.log("total score is " + totalScore);
+        compareScore();
     });
-    //     var sumScore = greenGuess + orangeGuess + purpleGuess;
-    //    console.log("sum is " + sumScore);
-    // }
-
-    //function addScore(g, o, p) {
 
 
-    // if (score === magicNumber) {
-    //     $("#displayWin").text("you win !");
-    // } else(score > magicNumber); {
-    //     $("#displayWin").text("Sorry, Try Again");
-    // }
+});
 
-    // addScore(greenGuess, orangeGuess, purpleGuess);
-
-
-})
+function generateNumbers() {
+    blueGuess = Math.floor((Math.random() * 12) + 1);
+    greenGuess = Math.floor((Math.random() * 12) + 1);
+    orangeGuess = Math.floor((Math.random() * 12) + 1);
+    purpleGuess = Math.floor((Math.random() * 12) + 1);
+    magicNumber = Math.floor((Math.random() * 120) + 19);
+    $("#magic").text("The magic number is " + magicNumber);
+}
