@@ -15,27 +15,32 @@ $(document).ready(function() {
     generateNumbers();
 
     function compareScore() {
+
         if (totalScore === magicNumber) {
+
             console.log("You win");
-            ("#displayWin").text("you win !");
+            $("#wins").text("you win !");
 
         } else if (totalScore > magicNumber) {
             console.log("you lose");
-            $("#displayWin").text("Sorry, Try Again");
+            $("#loses").text("Sorry, Try Again");
 
         } else {
-            console.log(totalScore);
+            //console.log(totalScore);
+
         }
 
     }
-    //$("#blue").on("click", function() {
-    // console.log(blueGuess);
 
+    function keepTrack() {
+
+    }
 
     $("#blue").on("click", function() {
         console.log(blueGuess);
         totalScore = (totalScore + blueGuess);
         console.log("total score is " + totalScore);
+        $("#score").text("Your lucky number is " + totalScore);
         compareScore();
     });
 
@@ -43,6 +48,7 @@ $(document).ready(function() {
         console.log(greenGuess);
         totalScore = (totalScore + greenGuess);
         console.log("total score is " + totalScore);
+        $("#score").text("Your lucky number is " + totalScore);
         compareScore();
     });
 
@@ -50,6 +56,7 @@ $(document).ready(function() {
         console.log(orangeGuess);
         totalScore = (totalScore + orangeGuess);
         console.log("total score is " + totalScore);
+        $("#score").text("Your lucky number is " + totalScore);
         compareScore();
     });
 
@@ -57,6 +64,7 @@ $(document).ready(function() {
         console.log(purpleGuess);
         totalScore = (totalScore + purpleGuess);
         console.log("total score is " + totalScore);
+        $("#score").text("Your lucky number is " + totalScore);
         compareScore();
     });
 
@@ -70,4 +78,5 @@ function generateNumbers() {
     purpleGuess = Math.floor((Math.random() * 12) + 1);
     magicNumber = Math.floor((Math.random() * 120) + 19);
     $("#magic").text("The magic number is " + magicNumber);
+
 }
