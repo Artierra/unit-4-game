@@ -9,6 +9,7 @@ var wins = 0;
 var loses = 0;
 
 
+
 //assign this number to magic numer
 //generate randon number between 1 to 12
 //assign  random number to each crystal*/
@@ -23,14 +24,16 @@ $(document).ready(function() {
             wins++;
             console.log("You win");
             $("#wins").text("you win; " + wins);
-            reset();
 
+            reset();
 
         } else if (totalScore > magicNumber) {
             loses++;
             console.log("you lose");
+
             $("#loses").text("Sorry, Try Again, You lost " + loses + " times");
             reset();
+
 
         } else {
             //console.log(totalScore);
@@ -40,7 +43,8 @@ $(document).ready(function() {
     }
 
     function reset() {
-        generateNumbers()
+
+        generateNumbers();
         totalScore = 0;
 
 
@@ -78,6 +82,9 @@ $(document).ready(function() {
         compareScore();
     });
 
+    // $("#tryAgain").on("click", function() {
+    //  reset();
+    // });
 
 });
 
